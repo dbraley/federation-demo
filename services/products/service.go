@@ -14,15 +14,14 @@ func (ec *executionContext) __resolve__service(ctx context.Context) (introspecti
 		return introspection.Service{}, errors.New("federated introspection disabled")
 	}
 	return introspection.Service{
-		SDL: `type Query @extends {
-	topProducts(first: Int): [Product]
-}
-
-type Product @key(fields: "upc") {
+		SDL: `type Product @key(fields: "upc price") {
 	upc: String!
 	name: String
 	price: Int
 	weight: Int
+}
+type Query @extends {
+	topProducts(first: Int = 5): [Product]
 }
 `,
 	}, nil

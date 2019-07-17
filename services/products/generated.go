@@ -207,34 +207,31 @@ func (ec *executionContext) introspectType(name string) (*introspection.Type, er
 }
 
 var parsedSchema = gqlparser.MustLoadSchema(
-	&ast.Source{Name: "schema.graphql", Input: `type Query @extends {
-	topProducts(first: Int): [Product]
-	_entities(representations: [_Any!]!): [_Entity]!
-	_service: _Service!
-}
-
+	&ast.Source{Name: "schema.graphql", Input: `directive @extends on OBJECT
+directive @external on FIELD_DEFINITION
+directive @key(fields: _FieldSet!) on OBJECT | INTERFACE
+directive @provides(fields: _FieldSet!) on FIELD_DEFINITION
+directive @requires(fields: _FieldSet!) on FIELD_DEFINITION
 type Product @key(fields: "upc") {
 	upc: String!
 	name: String
 	price: Int
 	weight: Int
 }
-
+type Query @extends {
+	topProducts(first: Int = 5): [Product]
+	_entities(representations: [_Any!]!): [_Entity]!
+	_service: _Service!
+}
+scalar _Any
+"""
+A union unifies all @entity types (TODO: interfaces)
+"""
+union _Entity = Product
+scalar _FieldSet
 type _Service {
 	sdl: String!
 }
-
-scalar _Any
-
-scalar _FieldSet
-
-union _Entity = Product
-
-directive @extends on OBJECT
-directive @external on FIELD_DEFINITION
-directive @key(fields: _FieldSet!) on INTERFACE | OBJECT
-directive @provides(fields: _FieldSet!) on FIELD_DEFINITION
-directive @requires(fields: _FieldSet!) on FIELD_DEFINITION
 `},
 )
 
