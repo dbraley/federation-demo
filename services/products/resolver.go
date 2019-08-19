@@ -7,16 +7,17 @@ import (
 
 type Resolver struct{}
 
-func (r *Resolver) Product() ProductResolver {
-	return &productResolver{r}
-}
 func (r *Resolver) Query() QueryResolver {
 	return &queryResolver{r}
 }
 
-type productResolver struct{ *Resolver }
+func (r *Resolver) Entity() EntityResolver {
+	return &entityResolver{r}
+}
 
-func (r *productResolver) ResolveEntity(ctx context.Context, upc string) (*Product, error) {
+type entityResolver struct{ *Resolver }
+
+func (r *entityResolver) FindProductByUpc(ctx context.Context, upc string) (*Product, error) {
 	for _, p := range products {
 		if p.Upc == upc {
 			return p, nil
