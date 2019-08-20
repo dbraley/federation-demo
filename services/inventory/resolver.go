@@ -48,10 +48,12 @@ type productResolver struct{ *Resolver }
 
 func (r *productResolver) ShippingEstimate(ctx context.Context, obj *Product) (*int, error) {
 	// free for expensive items
-	if *(obj.Price) > 1000 {
+	if obj.Price != nil && *(obj.Price) > 1000 {
 		return integer(0), nil
 	}
-
+	if obj.Weight == nil {
+		return nil, nil
+	}
 	return integer(*(obj.Weight) / 2), nil
 }
 
