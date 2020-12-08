@@ -5,7 +5,8 @@
 
 schema:
 - schema.graphql
-federated: true
+federation:
+  filename: federation.go
 exec:
   filename: generated.go
 model:
