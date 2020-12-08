@@ -14,6 +14,10 @@ func (r *Resolver) Product() ProductResolver {
 	return &productResolver{r}
 }
 
+type ProductResolver interface {
+	ShippingEstimate(ctx context.Context, obj *Product) (*int, error)
+}
+
 type entityResolver struct{ *Resolver }
 
 func (r *entityResolver) FindProductByUpc(ctx context.Context, upc string) (*Product, error) {
