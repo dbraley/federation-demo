@@ -9,8 +9,23 @@ To run this demo locally, pull down the repository then run the following comman
 ```sh
 npm install
 ```
-
 This will install all of the dependencies for the gateway and each underlying service.
+
+### Running Locally ( Gateway + Go)
+
+There's a handy Go `main.go` script in the root that will run all the Go services and the Node.JS Apollo Gateway
+```sh
+go run main.go
+```
+| Port | Service |
+|---|---|
+| [4000](http://localhost:4000) | Gateway |
+| [4001](http://localhost:4001)  | Accounts  |
+| [4002](http://localhost:4002) | Reviews |
+| [4003](http://localhost:4003)  | Products |
+| [4004](http://localhost:4004) | Inventory |
+
+### Running Locally (Node JS)
 
 ```sh
 npm run start-services

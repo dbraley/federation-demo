@@ -11,13 +11,14 @@
     "postinstall": "lerna bootstrap"
   },
   "devDependencies": {
+    "concurrently": "latest",
     "lerna": "latest",
     "nodemon": "latest",
-    "concurrently": "latest"
+    "npm-check": "^5.9.2"
   },
   "dependencies": {
-    "@apollo/gateway": "0.7.1",
-    "apollo-server": "^2.5.1-alpha.1",
+    "@apollo/gateway": "^0.21.4",
+    "apollo-server": "^2.19.0",
     "graphql": "latest"
   }
 }

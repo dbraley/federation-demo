@@ -15,12 +15,13 @@ const gateway = new ApolloGateway({
   ],
 
   // Experimental: Enabling this enables the query plan view in Playground.
-  __exposeQueryPlanExperimental: false,
+  __exposeQueryPlanExperimental: true,
 });
 
 (async () => {
   const server = new ApolloServer({
     gateway,
+    debug: true,
 
     // Apollo Graph Manager (previously known as Apollo Engine)
     // When enabled and an `ENGINE_API_KEY` is set in the environment,
@@ -29,6 +30,7 @@ const gateway = new ApolloGateway({
 
     // Subscriptions are unsupported but planned for a future Gateway version.
     subscriptions: false,
+    tracing: false,
   });
 
   server.listen().then(({ url }) => {
