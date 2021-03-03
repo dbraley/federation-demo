@@ -1,7 +1,10 @@
 type Product @extends @key(fields: "upc") {
-    upc: String! @external
-    weight: Int @external
-    price: Int @external
+    upc: String! @external @id
     inStock: Boolean
-    shippingEstimate: Int @requires(fields: "price weight")
+    shippingEstimate: Int
+}
+
+# For Dgraph
+type Query {
+  shippingEstimate: Int @custom(dql: "{me(){}}")
 }
