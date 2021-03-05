@@ -25,6 +25,15 @@ Then, initialize the Dgraph schema:
 curl http://localhost:8080/admin/schema --upload-file ./services/inventory/schema.graphql
 ```
 
+And then insert the data for the inventory service:
+
+```sh
+curl --request POST \
+  --url http://localhost:8080/graphql \
+  --header 'Content-Type: application/json' \
+  --data '{"query":"mutation { addProduct(upsert: true, input: [{upc: \"1\", inStock: true}, {upc: \"2\", inStock: false}, {upc: \"3\", inStock: true}]) { product { upc inStock } }}"}'
+```
+
 
 There's a handy Go `main.go` script in the root that will run all the Go services and the Node.JS Apollo Gateway
 ```sh
