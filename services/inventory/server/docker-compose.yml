@@ -3,8 +3,8 @@
 version: "3.5"
 services:
   alpha1:
-    # image: dgraph/dgraph:3642fed5
-    image: dgraph/dgraph:master
+    # master (a77939a1)
+    image: dgraph/dgraph:a77939a1
     working_dir: /data/alpha1
     labels:
       cluster: test
@@ -23,8 +23,7 @@ services:
         limits:
           memory: 32G
   zero1:
-    # image: dgraph/dgraph:3642fed5
-    image: dgraph/dgraph:master
+    image: dgraph/dgraph:a77939a1
     working_dir: /data/zero1
     labels:
       cluster: test
