@@ -6,7 +6,6 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"golang.org/x/sync/errgroup"
 	"io"
 	"log"
 	"os"
@@ -14,14 +13,16 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+
+	"golang.org/x/sync/errgroup"
 )
 
 func main() {
 	var subpath = []string{
-	"/services/accounts/server",
-	"/services/inventory/server",
-	"/services/products/server",
-	"/services/reviews/server",
+		"/services/accounts/server",
+		"/services/inventory/server",
+		"/services/products/server",
+		"/services/reviews/server",
 	}
 
 	var stdoutBuf = []bytes.Buffer{{}, {}, {}, {}}
@@ -30,16 +31,16 @@ func main() {
 	ctx, done := context.WithCancel(context.Background())
 	g, ctx := errgroup.WithContext(ctx)
 	// listen - a simple function that listens to the signals channel for interruption signals and then call done() of the errgroup.
-	listen := func () error {
+	listen := func() error {
 		signalChannel := getStopSignalsChannel()
 		select {
-	case sig := <-signalChannel:
-		log.Printf("Received signal: %s\n", sig)
-		done()
-	case <-ctx.Done():
-		log.Printf("closing signal goroutine\n")
-		return ctx.Err()
-	}
+		case sig := <-signalChannel:
+			log.Printf("Received signal: %s\n", sig)
+			done()
+		case <-ctx.Done():
+			log.Printf("closing signal goroutine\n")
+			return ctx.Err()
+		}
 
 		return nil
 	}
@@ -111,7 +112,6 @@ func gatewayRunner(stdoutBuf *bytes.Buffer, stderrBuf *bytes.Buffer) func() erro
 		return nil
 	}
 }
-
 
 func getStopSignalsChannel() chan os.Signal {
 
