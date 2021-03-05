@@ -11,6 +11,7 @@ import (
 )
 
 const defaultPort = "4004"
+const dgraphAddress = "http://localhost:8080"
 
 func main() {
 	port := os.Getenv("PORT")
@@ -18,7 +19,7 @@ func main() {
 		port = defaultPort
 	}
 
-	url, _ := url.Parse("http://localhost:8080")
+	url, _ := url.Parse(dgraphAddress)
 	http.Handle("/", playground.Handler("GraphQL playground", "/graphql"))
 	http.Handle("/graphql", httputil.NewSingleHostReverseProxy(url))
 	log.Printf("connect to http://localhost:%s/ for GraphQL playground", port)

@@ -13,6 +13,19 @@ This will install all of the dependencies for the gateway and each underlying se
 
 ### Running Locally ( Gateway + Go)
 
+First, run Dgraph:
+
+```sh
+go run main.go --start-dgraph
+```
+
+Then, initialize the Dgraph schema:
+
+```
+curl http://localhost:8080/admin/schema --upload-file ./services/inventory/schema.graphql
+```
+
+
 There's a handy Go `main.go` script in the root that will run all the Go services and the Node.JS Apollo Gateway
 ```sh
 go run main.go
@@ -24,6 +37,12 @@ go run main.go
 | [4002](http://localhost:4002) | Reviews |
 | [4003](http://localhost:4003)  | Products |
 | [4004](http://localhost:4004) | Inventory |
+
+To stop Dgraph, run
+
+```sh
+go run main.go --stop-dgraph
+```
 
 ### Running Locally (Node JS)
 

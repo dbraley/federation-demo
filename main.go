@@ -5,6 +5,7 @@ package main
 import (
 	"bytes"
 	"context"
+	"flag"
 	"fmt"
 	"io"
 	"log"
@@ -17,7 +18,44 @@ import (
 	"golang.org/x/sync/errgroup"
 )
 
+var (
+	startDgraph = flag.Bool("start-dgraph", false, "Start inventory service with Dgraph")
+	stopDgraph  = flag.Bool("stop-dgraph", false, "Start inventory service with Dgraph")
+)
+
 func main() {
+	flag.Parse()
+	if *startDgraph {
+		wd, err := os.Getwd()
+		if err != nil {
+			log.Fatalf("os.Getwd() failed with %v\n", err)
+		}
+		cmd := exec.Command("docker-compose", "up", "--detach")
+		cmd.Dir = wd + "/services/inventory/server"
+		cmd.Stdout = os.Stdout
+		cmd.Stderr = os.Stderr
+		err = cmd.Run()
+		if err != nil {
+			log.Fatalf("Starting Dgraph failed with: %v\n", err)
+		}
+		return
+	}
+	if *stopDgraph {
+		wd, err := os.Getwd()
+		if err != nil {
+			log.Fatalf("os.Getwd() failed with %v\n", err)
+		}
+		cmd := exec.Command("docker-compose", "down")
+		cmd.Dir = wd + "/services/inventory/server"
+		cmd.Stdout = os.Stdout
+		cmd.Stderr = os.Stderr
+		err = cmd.Run()
+		if err != nil {
+			log.Fatalf("Starting Dgraph failed with: %v\n", err)
+		}
+		return
+	}
+
 	var subpath = []string{
 		"/services/accounts/server",
 		"/services/inventory/server",
