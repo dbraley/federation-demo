@@ -26,9 +26,11 @@ var (
 	startDgraph = flag.Bool("start-dgraph", false, "Start inventory service with Dgraph")
 	stopDgraph  = flag.Bool("stop-dgraph", false, "Start inventory service with Dgraph")
 	initDgraph  = flag.Bool("init-dgraph", false, "Initialize inventory service with Dgraph")
+	useDgraph   = flag.Bool("use-dgraph", false, "Use Dgraph for inventory service ")
 )
 
 func main() {
+	log.SetFlags(log.Flags() &^ (log.Ldate | log.Ltime))
 	flag.Parse()
 	switch {
 	case *startDgraph:
@@ -64,28 +66,38 @@ func main() {
 		if err != nil {
 			log.Fatalf("os.Getwd() failed with %v\n", err)
 		}
-		// curl http://localhost:8080/admin/schema --upload-file ./services/inventory/schema.graphql
+
+		log.Println("curl http://localhost:8080/admin/schema " +
+			"--upload-file ./services/inventory/schema.graphql")
 		err = putInventorySchema(wd)
 		if err != nil {
 			log.Fatalf("putInventorySchema failed with %+v\n", err)
 		}
-		/*
-			curl --request POST \
-			  --url http://localhost:8080/graphql \
-			  --header 'Content-Type: application/json' \
-			  --data '{"query":"mutation { addProduct(upsert: true, input: [{upc: \"1\", inStock: true}, {upc: \"2\", inStock: false}, {upc: \"3\", inStock: true}]) { product { upc inStock } }}"}'
-		*/
-		err = postInventoryData()
+		inventoryDataMutation := `{
+  "query": "mutation { addProduct(upsert: true, input: [{upc: \"1\", inStock: true}, {upc: \"2\", inStock: false}, {upc: \"3\", inStock: true}]) { product { upc inStock } }}"
+}`
+
+		log.Printf("curl --request POST \\\n"+
+			"--url http://localhost:8080/graphql \\\n"+
+			"--header 'Content-Type: application/json' \\\n"+
+			"--data '%s'\n", inventoryDataMutation,
+		)
+
+		err = postInventoryData(inventoryDataMutation)
 		if err != nil {
 			log.Fatalf("postInventoryData failed with %+v\n", err)
 		}
+		return
 	}
 
 	subPaths := []string{
 		"/services/accounts/server",
-		//"/services/inventory/server", // not needed when dgraph is run
 		"/services/products/server",
 		"/services/reviews/server",
+	}
+
+	if !*useDgraph {
+		subPaths = append([]string{"/services/inventory/server"}, subPaths...)
 	}
 
 	stdoutBuf := []bytes.Buffer{{}, {}, {}, {}}
@@ -205,10 +217,7 @@ func putInventorySchema(wd string) error {
 	return nil
 }
 
-func postInventoryData() error {
-	inventoryDataMutation := `{
-  "query": "mutation { addProduct(upsert: true, input: [{upc: \"1\", inStock: true}, {upc: \"2\", inStock: false}, {upc: \"3\", inStock: true}]) { product { upc inStock } }}"
-}`
+func postInventoryData(inventoryDataMutation string) error {
 	body := strings.NewReader(inventoryDataMutation)
 	req, reqErr := http.NewRequest("POST", "http://localhost:8080/graphql", body)
 	if reqErr != nil {
