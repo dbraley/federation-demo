@@ -36,19 +36,19 @@ func (r *queryResolver) TopProducts(ctx context.Context, first *int) ([]*Product
 }
 
 var products = []*Product{
-	&Product{
+	{
 		Upc:    "1",
 		Name:   str("Table"),
 		Price:  num(899),
 		Weight: num(100),
 	},
-	&Product{
+	{
 		Upc:    "2",
 		Name:   str("Couch"),
 		Price:  num(1299),
 		Weight: num(1000),
 	},
-	&Product{
+	{
 		Upc:    "3",
 		Name:   str("Chair"),
 		Price:  num(54),

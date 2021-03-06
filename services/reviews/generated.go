@@ -696,7 +696,7 @@ func (ec *executionContext) dir_search_args(ctx context.Context, rawArgs map[str
 	var arg0 []DgraphIndex
 	if tmp, ok := rawArgs["by"]; ok {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("by"))
-		arg0, err = ec.unmarshalODgraphIndex2ᚕgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐDgraphIndexᚄ(ctx, tmp)
+		arg0, err = ec.unmarshalODgraphIndex2ᚕgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐDgraphIndexᚄ(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -939,7 +939,7 @@ func (ec *executionContext) _Entity_findProductByUpc(ctx context.Context, field 
 	}
 	res := resTmp.(*Product)
 	fc.Result = res
-	return ec.marshalNProduct2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐProduct(ctx, field.Selections, res)
+	return ec.marshalNProduct2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐProduct(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Entity_findReviewByID(ctx context.Context, field graphql.CollectedField) (ret graphql.Marshaler) {
@@ -978,7 +978,7 @@ func (ec *executionContext) _Entity_findReviewByID(ctx context.Context, field gr
 	}
 	res := resTmp.(*Review)
 	fc.Result = res
-	return ec.marshalNReview2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx, field.Selections, res)
+	return ec.marshalNReview2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Entity_findUserByID(ctx context.Context, field graphql.CollectedField) (ret graphql.Marshaler) {
@@ -1017,7 +1017,7 @@ func (ec *executionContext) _Entity_findUserByID(ctx context.Context, field grap
 	}
 	res := resTmp.(*User)
 	fc.Result = res
-	return ec.marshalNUser2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐUser(ctx, field.Selections, res)
+	return ec.marshalNUser2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐUser(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _MultiPolygon_polygons(ctx context.Context, field graphql.CollectedField, obj *MultiPolygon) (ret graphql.Marshaler) {
@@ -1049,7 +1049,7 @@ func (ec *executionContext) _MultiPolygon_polygons(ctx context.Context, field gr
 	}
 	res := resTmp.([]*Polygon)
 	fc.Result = res
-	return ec.marshalNPolygon2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonᚄ(ctx, field.Selections, res)
+	return ec.marshalNPolygon2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Point_longitude(ctx context.Context, field graphql.CollectedField, obj *Point) (ret graphql.Marshaler) {
@@ -1145,7 +1145,7 @@ func (ec *executionContext) _PointList_points(ctx context.Context, field graphql
 	}
 	res := resTmp.([]*Point)
 	fc.Result = res
-	return ec.marshalNPoint2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointᚄ(ctx, field.Selections, res)
+	return ec.marshalNPoint2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Polygon_coordinates(ctx context.Context, field graphql.CollectedField, obj *Polygon) (ret graphql.Marshaler) {
@@ -1177,7 +1177,7 @@ func (ec *executionContext) _Polygon_coordinates(ctx context.Context, field grap
 	}
 	res := resTmp.([]*PointList)
 	fc.Result = res
-	return ec.marshalNPointList2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointListᚄ(ctx, field.Selections, res)
+	return ec.marshalNPointList2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointListᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Product_upc(ctx context.Context, field graphql.CollectedField, obj *Product) (ret graphql.Marshaler) {
@@ -1238,7 +1238,7 @@ func (ec *executionContext) _Product_reviews(ctx context.Context, field graphql.
 	}
 	res := resTmp.([]*Review)
 	fc.Result = res
-	return ec.marshalOReview2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx, field.Selections, res)
+	return ec.marshalOReview2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Query__entities(ctx context.Context, field graphql.CollectedField) (ret graphql.Marshaler) {
@@ -1464,7 +1464,7 @@ func (ec *executionContext) _Review_author(ctx context.Context, field graphql.Co
 	}
 	res := resTmp.(*User)
 	fc.Result = res
-	return ec.marshalOUser2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐUser(ctx, field.Selections, res)
+	return ec.marshalOUser2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐUser(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Review_product(ctx context.Context, field graphql.CollectedField, obj *Review) (ret graphql.Marshaler) {
@@ -1493,7 +1493,7 @@ func (ec *executionContext) _Review_product(ctx context.Context, field graphql.C
 	}
 	res := resTmp.(*Product)
 	fc.Result = res
-	return ec.marshalOProduct2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐProduct(ctx, field.Selections, res)
+	return ec.marshalOProduct2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐProduct(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _User_id(ctx context.Context, field graphql.CollectedField, obj *User) (ret graphql.Marshaler) {
@@ -1583,7 +1583,7 @@ func (ec *executionContext) _User_reviews(ctx context.Context, field graphql.Col
 	}
 	res := resTmp.([]*Review)
 	fc.Result = res
-	return ec.marshalOReview2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx, field.Selections, res)
+	return ec.marshalOReview2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) __Service_sdl(ctx context.Context, field graphql.CollectedField, obj *fedruntime.Service) (ret graphql.Marshaler) {
@@ -2616,7 +2616,7 @@ func (ec *executionContext) unmarshalInputAuthRule(ctx context.Context, obj inte
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("and"))
-			it.And, err = ec.unmarshalOAuthRule2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐAuthRule(ctx, v)
+			it.And, err = ec.unmarshalOAuthRule2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐAuthRule(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -2624,7 +2624,7 @@ func (ec *executionContext) unmarshalInputAuthRule(ctx context.Context, obj inte
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("or"))
-			it.Or, err = ec.unmarshalOAuthRule2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐAuthRule(ctx, v)
+			it.Or, err = ec.unmarshalOAuthRule2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐAuthRule(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -2632,7 +2632,7 @@ func (ec *executionContext) unmarshalInputAuthRule(ctx context.Context, obj inte
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("not"))
-			it.Not, err = ec.unmarshalOAuthRule2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐAuthRule(ctx, v)
+			it.Not, err = ec.unmarshalOAuthRule2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐAuthRule(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -2660,7 +2660,7 @@ func (ec *executionContext) unmarshalInputContainsFilter(ctx context.Context, ob
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("point"))
-			it.Point, err = ec.unmarshalOPointRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointRef(ctx, v)
+			it.Point, err = ec.unmarshalOPointRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointRef(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -2668,7 +2668,7 @@ func (ec *executionContext) unmarshalInputContainsFilter(ctx context.Context, ob
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("polygon"))
-			it.Polygon, err = ec.unmarshalOPolygonRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRef(ctx, v)
+			it.Polygon, err = ec.unmarshalOPolygonRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRef(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -2696,7 +2696,7 @@ func (ec *executionContext) unmarshalInputCustomHTTP(ctx context.Context, obj in
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("method"))
-			it.Method, err = ec.unmarshalNHTTPMethod2githubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐHTTPMethod(ctx, v)
+			it.Method, err = ec.unmarshalNHTTPMethod2githubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐHTTPMethod(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -2720,7 +2720,7 @@ func (ec *executionContext) unmarshalInputCustomHTTP(ctx context.Context, obj in
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("mode"))
-			it.Mode, err = ec.unmarshalOMode2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐMode(ctx, v)
+			it.Mode, err = ec.unmarshalOMode2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐMode(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -2820,7 +2820,7 @@ func (ec *executionContext) unmarshalInputDateTimeFilter(ctx context.Context, ob
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("between"))
-			it.Between, err = ec.unmarshalODateTimeRange2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐDateTimeRange(ctx, v)
+			it.Between, err = ec.unmarshalODateTimeRange2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐDateTimeRange(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -2916,7 +2916,7 @@ func (ec *executionContext) unmarshalInputFloatFilter(ctx context.Context, obj i
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("between"))
-			it.Between, err = ec.unmarshalOFloatRange2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐFloatRange(ctx, v)
+			it.Between, err = ec.unmarshalOFloatRange2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐFloatRange(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3092,7 +3092,7 @@ func (ec *executionContext) unmarshalInputInt64Filter(ctx context.Context, obj i
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("between"))
-			it.Between, err = ec.unmarshalOInt64Range2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐInt64Range(ctx, v)
+			it.Between, err = ec.unmarshalOInt64Range2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐInt64Range(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3188,7 +3188,7 @@ func (ec *executionContext) unmarshalInputIntFilter(ctx context.Context, obj int
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("between"))
-			it.Between, err = ec.unmarshalOIntRange2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐIntRange(ctx, v)
+			it.Between, err = ec.unmarshalOIntRange2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐIntRange(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3236,7 +3236,7 @@ func (ec *executionContext) unmarshalInputIntersectsFilter(ctx context.Context, 
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("polygon"))
-			it.Polygon, err = ec.unmarshalOPolygonRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRef(ctx, v)
+			it.Polygon, err = ec.unmarshalOPolygonRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRef(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3244,7 +3244,7 @@ func (ec *executionContext) unmarshalInputIntersectsFilter(ctx context.Context, 
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("multiPolygon"))
-			it.MultiPolygon, err = ec.unmarshalOMultiPolygonRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐMultiPolygonRef(ctx, v)
+			it.MultiPolygon, err = ec.unmarshalOMultiPolygonRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐMultiPolygonRef(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3264,7 +3264,7 @@ func (ec *executionContext) unmarshalInputMultiPolygonRef(ctx context.Context, o
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("polygons"))
-			it.Polygons, err = ec.unmarshalNPolygonRef2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRefᚄ(ctx, v)
+			it.Polygons, err = ec.unmarshalNPolygonRef2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRefᚄ(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3292,7 +3292,7 @@ func (ec *executionContext) unmarshalInputNearFilter(ctx context.Context, obj in
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("coordinate"))
-			it.Coordinate, err = ec.unmarshalNPointRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointRef(ctx, v)
+			it.Coordinate, err = ec.unmarshalNPointRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointRef(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3312,7 +3312,7 @@ func (ec *executionContext) unmarshalInputPointGeoFilter(ctx context.Context, ob
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("near"))
-			it.Near, err = ec.unmarshalONearFilter2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐNearFilter(ctx, v)
+			it.Near, err = ec.unmarshalONearFilter2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐNearFilter(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3320,7 +3320,7 @@ func (ec *executionContext) unmarshalInputPointGeoFilter(ctx context.Context, ob
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("within"))
-			it.Within, err = ec.unmarshalOWithinFilter2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐWithinFilter(ctx, v)
+			it.Within, err = ec.unmarshalOWithinFilter2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐWithinFilter(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3340,7 +3340,7 @@ func (ec *executionContext) unmarshalInputPointListRef(ctx context.Context, obj 
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("points"))
-			it.Points, err = ec.unmarshalNPointRef2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointRefᚄ(ctx, v)
+			it.Points, err = ec.unmarshalNPointRef2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointRefᚄ(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3388,7 +3388,7 @@ func (ec *executionContext) unmarshalInputPolygonGeoFilter(ctx context.Context, 
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("near"))
-			it.Near, err = ec.unmarshalONearFilter2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐNearFilter(ctx, v)
+			it.Near, err = ec.unmarshalONearFilter2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐNearFilter(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3396,7 +3396,7 @@ func (ec *executionContext) unmarshalInputPolygonGeoFilter(ctx context.Context, 
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("within"))
-			it.Within, err = ec.unmarshalOWithinFilter2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐWithinFilter(ctx, v)
+			it.Within, err = ec.unmarshalOWithinFilter2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐWithinFilter(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3404,7 +3404,7 @@ func (ec *executionContext) unmarshalInputPolygonGeoFilter(ctx context.Context, 
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("contains"))
-			it.Contains, err = ec.unmarshalOContainsFilter2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐContainsFilter(ctx, v)
+			it.Contains, err = ec.unmarshalOContainsFilter2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐContainsFilter(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3412,7 +3412,7 @@ func (ec *executionContext) unmarshalInputPolygonGeoFilter(ctx context.Context, 
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("intersects"))
-			it.Intersects, err = ec.unmarshalOIntersectsFilter2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐIntersectsFilter(ctx, v)
+			it.Intersects, err = ec.unmarshalOIntersectsFilter2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐIntersectsFilter(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3432,7 +3432,7 @@ func (ec *executionContext) unmarshalInputPolygonRef(ctx context.Context, obj in
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("coordinates"))
-			it.Coordinates, err = ec.unmarshalNPointListRef2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointListRefᚄ(ctx, v)
+			it.Coordinates, err = ec.unmarshalNPointListRef2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointListRefᚄ(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3500,7 +3500,7 @@ func (ec *executionContext) unmarshalInputStringExactFilter(ctx context.Context,
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("between"))
-			it.Between, err = ec.unmarshalOStringRange2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐStringRange(ctx, v)
+			it.Between, err = ec.unmarshalOStringRange2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐStringRange(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -3652,7 +3652,7 @@ func (ec *executionContext) unmarshalInputWithinFilter(ctx context.Context, obj 
 			var err error
 
 			ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("polygon"))
-			it.Polygon, err = ec.unmarshalNPolygonRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRef(ctx, v)
+			it.Polygon, err = ec.unmarshalNPolygonRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRef(ctx, v)
 			if err != nil {
 				return it, err
 			}
@@ -4331,13 +4331,13 @@ func (ec *executionContext) marshalNDateTime2string(ctx context.Context, sel ast
 	return res
 }
 
-func (ec *executionContext) unmarshalNDgraphIndex2githubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐDgraphIndex(ctx context.Context, v interface{}) (DgraphIndex, error) {
+func (ec *executionContext) unmarshalNDgraphIndex2githubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐDgraphIndex(ctx context.Context, v interface{}) (DgraphIndex, error) {
 	var res DgraphIndex
 	err := res.UnmarshalGQL(v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNDgraphIndex2githubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐDgraphIndex(ctx context.Context, sel ast.SelectionSet, v DgraphIndex) graphql.Marshaler {
+func (ec *executionContext) marshalNDgraphIndex2githubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐDgraphIndex(ctx context.Context, sel ast.SelectionSet, v DgraphIndex) graphql.Marshaler {
 	return v
 }
 
@@ -4356,13 +4356,13 @@ func (ec *executionContext) marshalNFloat2float64(ctx context.Context, sel ast.S
 	return res
 }
 
-func (ec *executionContext) unmarshalNHTTPMethod2githubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐHTTPMethod(ctx context.Context, v interface{}) (HTTPMethod, error) {
+func (ec *executionContext) unmarshalNHTTPMethod2githubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐHTTPMethod(ctx context.Context, v interface{}) (HTTPMethod, error) {
 	var res HTTPMethod
 	err := res.UnmarshalGQL(v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNHTTPMethod2githubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐHTTPMethod(ctx context.Context, sel ast.SelectionSet, v HTTPMethod) graphql.Marshaler {
+func (ec *executionContext) marshalNHTTPMethod2githubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐHTTPMethod(ctx context.Context, sel ast.SelectionSet, v HTTPMethod) graphql.Marshaler {
 	return v
 }
 
@@ -4411,7 +4411,7 @@ func (ec *executionContext) marshalNInt642string(ctx context.Context, sel ast.Se
 	return res
 }
 
-func (ec *executionContext) marshalNPoint2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointᚄ(ctx context.Context, sel ast.SelectionSet, v []*Point) graphql.Marshaler {
+func (ec *executionContext) marshalNPoint2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointᚄ(ctx context.Context, sel ast.SelectionSet, v []*Point) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -4435,7 +4435,7 @@ func (ec *executionContext) marshalNPoint2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑwor
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNPoint2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPoint(ctx, sel, v[i])
+			ret[i] = ec.marshalNPoint2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPoint(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -4448,7 +4448,7 @@ func (ec *executionContext) marshalNPoint2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑwor
 	return ret
 }
 
-func (ec *executionContext) marshalNPoint2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPoint(ctx context.Context, sel ast.SelectionSet, v *Point) graphql.Marshaler {
+func (ec *executionContext) marshalNPoint2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPoint(ctx context.Context, sel ast.SelectionSet, v *Point) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "must not be null")
@@ -4458,7 +4458,7 @@ func (ec *executionContext) marshalNPoint2ᚖgithubᚗcomᚋmarwanᚑatᚑwork�
 	return ec._Point(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalNPointList2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointListᚄ(ctx context.Context, sel ast.SelectionSet, v []*PointList) graphql.Marshaler {
+func (ec *executionContext) marshalNPointList2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointListᚄ(ctx context.Context, sel ast.SelectionSet, v []*PointList) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -4482,7 +4482,7 @@ func (ec *executionContext) marshalNPointList2ᚕᚖgithubᚗcomᚋmarwanᚑat�
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNPointList2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointList(ctx, sel, v[i])
+			ret[i] = ec.marshalNPointList2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointList(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -4495,7 +4495,7 @@ func (ec *executionContext) marshalNPointList2ᚕᚖgithubᚗcomᚋmarwanᚑat�
 	return ret
 }
 
-func (ec *executionContext) marshalNPointList2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointList(ctx context.Context, sel ast.SelectionSet, v *PointList) graphql.Marshaler {
+func (ec *executionContext) marshalNPointList2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointList(ctx context.Context, sel ast.SelectionSet, v *PointList) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "must not be null")
@@ -4505,7 +4505,7 @@ func (ec *executionContext) marshalNPointList2ᚖgithubᚗcomᚋmarwanᚑatᚑwo
 	return ec._PointList(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalNPointListRef2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointListRefᚄ(ctx context.Context, v interface{}) ([]*PointListRef, error) {
+func (ec *executionContext) unmarshalNPointListRef2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointListRefᚄ(ctx context.Context, v interface{}) ([]*PointListRef, error) {
 	var vSlice []interface{}
 	if v != nil {
 		if tmp1, ok := v.([]interface{}); ok {
@@ -4518,7 +4518,7 @@ func (ec *executionContext) unmarshalNPointListRef2ᚕᚖgithubᚗcomᚋmarwan�
 	res := make([]*PointListRef, len(vSlice))
 	for i := range vSlice {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithIndex(i))
-		res[i], err = ec.unmarshalNPointListRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointListRef(ctx, vSlice[i])
+		res[i], err = ec.unmarshalNPointListRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointListRef(ctx, vSlice[i])
 		if err != nil {
 			return nil, err
 		}
@@ -4526,12 +4526,12 @@ func (ec *executionContext) unmarshalNPointListRef2ᚕᚖgithubᚗcomᚋmarwan�
 	return res, nil
 }
 
-func (ec *executionContext) unmarshalNPointListRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointListRef(ctx context.Context, v interface{}) (*PointListRef, error) {
+func (ec *executionContext) unmarshalNPointListRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointListRef(ctx context.Context, v interface{}) (*PointListRef, error) {
 	res, err := ec.unmarshalInputPointListRef(ctx, v)
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) unmarshalNPointRef2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointRefᚄ(ctx context.Context, v interface{}) ([]*PointRef, error) {
+func (ec *executionContext) unmarshalNPointRef2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointRefᚄ(ctx context.Context, v interface{}) ([]*PointRef, error) {
 	var vSlice []interface{}
 	if v != nil {
 		if tmp1, ok := v.([]interface{}); ok {
@@ -4544,7 +4544,7 @@ func (ec *executionContext) unmarshalNPointRef2ᚕᚖgithubᚗcomᚋmarwanᚑat�
 	res := make([]*PointRef, len(vSlice))
 	for i := range vSlice {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithIndex(i))
-		res[i], err = ec.unmarshalNPointRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointRef(ctx, vSlice[i])
+		res[i], err = ec.unmarshalNPointRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointRef(ctx, vSlice[i])
 		if err != nil {
 			return nil, err
 		}
@@ -4552,12 +4552,12 @@ func (ec *executionContext) unmarshalNPointRef2ᚕᚖgithubᚗcomᚋmarwanᚑat�
 	return res, nil
 }
 
-func (ec *executionContext) unmarshalNPointRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointRef(ctx context.Context, v interface{}) (*PointRef, error) {
+func (ec *executionContext) unmarshalNPointRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointRef(ctx context.Context, v interface{}) (*PointRef, error) {
 	res, err := ec.unmarshalInputPointRef(ctx, v)
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNPolygon2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonᚄ(ctx context.Context, sel ast.SelectionSet, v []*Polygon) graphql.Marshaler {
+func (ec *executionContext) marshalNPolygon2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonᚄ(ctx context.Context, sel ast.SelectionSet, v []*Polygon) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -4581,7 +4581,7 @@ func (ec *executionContext) marshalNPolygon2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑw
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNPolygon2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygon(ctx, sel, v[i])
+			ret[i] = ec.marshalNPolygon2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygon(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -4594,7 +4594,7 @@ func (ec *executionContext) marshalNPolygon2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑw
 	return ret
 }
 
-func (ec *executionContext) marshalNPolygon2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygon(ctx context.Context, sel ast.SelectionSet, v *Polygon) graphql.Marshaler {
+func (ec *executionContext) marshalNPolygon2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygon(ctx context.Context, sel ast.SelectionSet, v *Polygon) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "must not be null")
@@ -4604,7 +4604,7 @@ func (ec *executionContext) marshalNPolygon2ᚖgithubᚗcomᚋmarwanᚑatᚑwork
 	return ec._Polygon(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalNPolygonRef2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRefᚄ(ctx context.Context, v interface{}) ([]*PolygonRef, error) {
+func (ec *executionContext) unmarshalNPolygonRef2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRefᚄ(ctx context.Context, v interface{}) ([]*PolygonRef, error) {
 	var vSlice []interface{}
 	if v != nil {
 		if tmp1, ok := v.([]interface{}); ok {
@@ -4617,7 +4617,7 @@ func (ec *executionContext) unmarshalNPolygonRef2ᚕᚖgithubᚗcomᚋmarwanᚑa
 	res := make([]*PolygonRef, len(vSlice))
 	for i := range vSlice {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithIndex(i))
-		res[i], err = ec.unmarshalNPolygonRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRef(ctx, vSlice[i])
+		res[i], err = ec.unmarshalNPolygonRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRef(ctx, vSlice[i])
 		if err != nil {
 			return nil, err
 		}
@@ -4625,16 +4625,16 @@ func (ec *executionContext) unmarshalNPolygonRef2ᚕᚖgithubᚗcomᚋmarwanᚑa
 	return res, nil
 }
 
-func (ec *executionContext) unmarshalNPolygonRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRef(ctx context.Context, v interface{}) (*PolygonRef, error) {
+func (ec *executionContext) unmarshalNPolygonRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRef(ctx context.Context, v interface{}) (*PolygonRef, error) {
 	res, err := ec.unmarshalInputPolygonRef(ctx, v)
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNProduct2githubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐProduct(ctx context.Context, sel ast.SelectionSet, v Product) graphql.Marshaler {
+func (ec *executionContext) marshalNProduct2githubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐProduct(ctx context.Context, sel ast.SelectionSet, v Product) graphql.Marshaler {
 	return ec._Product(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNProduct2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐProduct(ctx context.Context, sel ast.SelectionSet, v *Product) graphql.Marshaler {
+func (ec *executionContext) marshalNProduct2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐProduct(ctx context.Context, sel ast.SelectionSet, v *Product) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "must not be null")
@@ -4644,11 +4644,11 @@ func (ec *executionContext) marshalNProduct2ᚖgithubᚗcomᚋmarwanᚑatᚑwork
 	return ec._Product(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalNReview2githubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx context.Context, sel ast.SelectionSet, v Review) graphql.Marshaler {
+func (ec *executionContext) marshalNReview2githubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx context.Context, sel ast.SelectionSet, v Review) graphql.Marshaler {
 	return ec._Review(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNReview2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx context.Context, sel ast.SelectionSet, v *Review) graphql.Marshaler {
+func (ec *executionContext) marshalNReview2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx context.Context, sel ast.SelectionSet, v *Review) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "must not be null")
@@ -4673,11 +4673,11 @@ func (ec *executionContext) marshalNString2string(ctx context.Context, sel ast.S
 	return res
 }
 
-func (ec *executionContext) marshalNUser2githubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐUser(ctx context.Context, sel ast.SelectionSet, v User) graphql.Marshaler {
+func (ec *executionContext) marshalNUser2githubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐUser(ctx context.Context, sel ast.SelectionSet, v User) graphql.Marshaler {
 	return ec._User(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNUser2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐUser(ctx context.Context, sel ast.SelectionSet, v *User) graphql.Marshaler {
+func (ec *executionContext) marshalNUser2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐUser(ctx context.Context, sel ast.SelectionSet, v *User) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "must not be null")
@@ -5023,7 +5023,7 @@ func (ec *executionContext) marshalN__TypeKind2string(ctx context.Context, sel a
 	return res
 }
 
-func (ec *executionContext) unmarshalOAuthRule2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐAuthRule(ctx context.Context, v interface{}) ([]*AuthRule, error) {
+func (ec *executionContext) unmarshalOAuthRule2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐAuthRule(ctx context.Context, v interface{}) ([]*AuthRule, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5039,7 +5039,7 @@ func (ec *executionContext) unmarshalOAuthRule2ᚕᚖgithubᚗcomᚋmarwanᚑat�
 	res := make([]*AuthRule, len(vSlice))
 	for i := range vSlice {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithIndex(i))
-		res[i], err = ec.unmarshalOAuthRule2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐAuthRule(ctx, vSlice[i])
+		res[i], err = ec.unmarshalOAuthRule2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐAuthRule(ctx, vSlice[i])
 		if err != nil {
 			return nil, err
 		}
@@ -5047,7 +5047,7 @@ func (ec *executionContext) unmarshalOAuthRule2ᚕᚖgithubᚗcomᚋmarwanᚑat�
 	return res, nil
 }
 
-func (ec *executionContext) unmarshalOAuthRule2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐAuthRule(ctx context.Context, v interface{}) (*AuthRule, error) {
+func (ec *executionContext) unmarshalOAuthRule2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐAuthRule(ctx context.Context, v interface{}) (*AuthRule, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5079,7 +5079,7 @@ func (ec *executionContext) marshalOBoolean2ᚖbool(ctx context.Context, sel ast
 	return graphql.MarshalBoolean(*v)
 }
 
-func (ec *executionContext) unmarshalOContainsFilter2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐContainsFilter(ctx context.Context, v interface{}) (*ContainsFilter, error) {
+func (ec *executionContext) unmarshalOContainsFilter2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐContainsFilter(ctx context.Context, v interface{}) (*ContainsFilter, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5138,7 +5138,7 @@ func (ec *executionContext) marshalODateTime2ᚖstring(ctx context.Context, sel 
 	return graphql.MarshalString(*v)
 }
 
-func (ec *executionContext) unmarshalODateTimeRange2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐDateTimeRange(ctx context.Context, v interface{}) (*DateTimeRange, error) {
+func (ec *executionContext) unmarshalODateTimeRange2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐDateTimeRange(ctx context.Context, v interface{}) (*DateTimeRange, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5146,7 +5146,7 @@ func (ec *executionContext) unmarshalODateTimeRange2ᚖgithubᚗcomᚋmarwanᚑa
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) unmarshalODgraphIndex2ᚕgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐDgraphIndexᚄ(ctx context.Context, v interface{}) ([]DgraphIndex, error) {
+func (ec *executionContext) unmarshalODgraphIndex2ᚕgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐDgraphIndexᚄ(ctx context.Context, v interface{}) ([]DgraphIndex, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5162,7 +5162,7 @@ func (ec *executionContext) unmarshalODgraphIndex2ᚕgithubᚗcomᚋmarwanᚑat�
 	res := make([]DgraphIndex, len(vSlice))
 	for i := range vSlice {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithIndex(i))
-		res[i], err = ec.unmarshalNDgraphIndex2githubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐDgraphIndex(ctx, vSlice[i])
+		res[i], err = ec.unmarshalNDgraphIndex2githubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐDgraphIndex(ctx, vSlice[i])
 		if err != nil {
 			return nil, err
 		}
@@ -5170,7 +5170,7 @@ func (ec *executionContext) unmarshalODgraphIndex2ᚕgithubᚗcomᚋmarwanᚑat�
 	return res, nil
 }
 
-func (ec *executionContext) marshalODgraphIndex2ᚕgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐDgraphIndexᚄ(ctx context.Context, sel ast.SelectionSet, v []DgraphIndex) graphql.Marshaler {
+func (ec *executionContext) marshalODgraphIndex2ᚕgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐDgraphIndexᚄ(ctx context.Context, sel ast.SelectionSet, v []DgraphIndex) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
@@ -5197,7 +5197,7 @@ func (ec *executionContext) marshalODgraphIndex2ᚕgithubᚗcomᚋmarwanᚑatᚑ
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNDgraphIndex2githubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐDgraphIndex(ctx, sel, v[i])
+			ret[i] = ec.marshalNDgraphIndex2githubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐDgraphIndex(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -5261,7 +5261,7 @@ func (ec *executionContext) marshalOFloat2ᚖfloat64(ctx context.Context, sel as
 	return graphql.MarshalFloat(*v)
 }
 
-func (ec *executionContext) unmarshalOFloatRange2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐFloatRange(ctx context.Context, v interface{}) (*FloatRange, error) {
+func (ec *executionContext) unmarshalOFloatRange2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐFloatRange(ctx context.Context, v interface{}) (*FloatRange, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5371,7 +5371,7 @@ func (ec *executionContext) marshalOInt642ᚖstring(ctx context.Context, sel ast
 	return graphql.MarshalString(*v)
 }
 
-func (ec *executionContext) unmarshalOInt64Range2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐInt64Range(ctx context.Context, v interface{}) (*Int64Range, error) {
+func (ec *executionContext) unmarshalOInt64Range2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐInt64Range(ctx context.Context, v interface{}) (*Int64Range, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5379,7 +5379,7 @@ func (ec *executionContext) unmarshalOInt64Range2ᚖgithubᚗcomᚋmarwanᚑat�
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) unmarshalOIntRange2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐIntRange(ctx context.Context, v interface{}) (*IntRange, error) {
+func (ec *executionContext) unmarshalOIntRange2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐIntRange(ctx context.Context, v interface{}) (*IntRange, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5387,7 +5387,7 @@ func (ec *executionContext) unmarshalOIntRange2ᚖgithubᚗcomᚋmarwanᚑatᚑw
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) unmarshalOIntersectsFilter2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐIntersectsFilter(ctx context.Context, v interface{}) (*IntersectsFilter, error) {
+func (ec *executionContext) unmarshalOIntersectsFilter2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐIntersectsFilter(ctx context.Context, v interface{}) (*IntersectsFilter, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5395,7 +5395,7 @@ func (ec *executionContext) unmarshalOIntersectsFilter2ᚖgithubᚗcomᚋmarwan�
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) unmarshalOMode2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐMode(ctx context.Context, v interface{}) (*Mode, error) {
+func (ec *executionContext) unmarshalOMode2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐMode(ctx context.Context, v interface{}) (*Mode, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5404,14 +5404,14 @@ func (ec *executionContext) unmarshalOMode2ᚖgithubᚗcomᚋmarwanᚑatᚑwork�
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalOMode2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐMode(ctx context.Context, sel ast.SelectionSet, v *Mode) graphql.Marshaler {
+func (ec *executionContext) marshalOMode2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐMode(ctx context.Context, sel ast.SelectionSet, v *Mode) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
 	return v
 }
 
-func (ec *executionContext) unmarshalOMultiPolygonRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐMultiPolygonRef(ctx context.Context, v interface{}) (*MultiPolygonRef, error) {
+func (ec *executionContext) unmarshalOMultiPolygonRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐMultiPolygonRef(ctx context.Context, v interface{}) (*MultiPolygonRef, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5419,7 +5419,7 @@ func (ec *executionContext) unmarshalOMultiPolygonRef2ᚖgithubᚗcomᚋmarwan�
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) unmarshalONearFilter2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐNearFilter(ctx context.Context, v interface{}) (*NearFilter, error) {
+func (ec *executionContext) unmarshalONearFilter2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐNearFilter(ctx context.Context, v interface{}) (*NearFilter, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5427,7 +5427,7 @@ func (ec *executionContext) unmarshalONearFilter2ᚖgithubᚗcomᚋmarwanᚑat�
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) unmarshalOPointRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointRef(ctx context.Context, v interface{}) (*PointRef, error) {
+func (ec *executionContext) unmarshalOPointRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPointRef(ctx context.Context, v interface{}) (*PointRef, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5435,7 +5435,7 @@ func (ec *executionContext) unmarshalOPointRef2ᚖgithubᚗcomᚋmarwanᚑatᚑw
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) unmarshalOPolygonRef2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRef(ctx context.Context, v interface{}) (*PolygonRef, error) {
+func (ec *executionContext) unmarshalOPolygonRef2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐPolygonRef(ctx context.Context, v interface{}) (*PolygonRef, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5443,14 +5443,14 @@ func (ec *executionContext) unmarshalOPolygonRef2ᚖgithubᚗcomᚋmarwanᚑat�
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalOProduct2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐProduct(ctx context.Context, sel ast.SelectionSet, v *Product) graphql.Marshaler {
+func (ec *executionContext) marshalOProduct2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐProduct(ctx context.Context, sel ast.SelectionSet, v *Product) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
 	return ec._Product(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalOReview2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx context.Context, sel ast.SelectionSet, v []*Review) graphql.Marshaler {
+func (ec *executionContext) marshalOReview2ᚕᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx context.Context, sel ast.SelectionSet, v []*Review) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
@@ -5477,7 +5477,7 @@ func (ec *executionContext) marshalOReview2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑwo
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalOReview2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx, sel, v[i])
+			ret[i] = ec.marshalOReview2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -5490,7 +5490,7 @@ func (ec *executionContext) marshalOReview2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑwo
 	return ret
 }
 
-func (ec *executionContext) marshalOReview2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx context.Context, sel ast.SelectionSet, v *Review) graphql.Marshaler {
+func (ec *executionContext) marshalOReview2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐReview(ctx context.Context, sel ast.SelectionSet, v *Review) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
@@ -5593,7 +5593,7 @@ func (ec *executionContext) marshalOString2ᚖstring(ctx context.Context, sel as
 	return graphql.MarshalString(*v)
 }
 
-func (ec *executionContext) unmarshalOStringRange2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐStringRange(ctx context.Context, v interface{}) (*StringRange, error) {
+func (ec *executionContext) unmarshalOStringRange2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐStringRange(ctx context.Context, v interface{}) (*StringRange, error) {
 	if v == nil {
 		return nil, nil
 	}
@@ -5601,14 +5601,14 @@ func (ec *executionContext) unmarshalOStringRange2ᚖgithubᚗcomᚋmarwanᚑat�
 	return &res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalOUser2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐUser(ctx context.Context, sel ast.SelectionSet, v *User) graphql.Marshaler {
+func (ec *executionContext) marshalOUser2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐUser(ctx context.Context, sel ast.SelectionSet, v *User) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
 	return ec._User(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalOWithinFilter2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋreviewsᚐWithinFilter(ctx context.Context, v interface{}) (*WithinFilter, error) {
+func (ec *executionContext) unmarshalOWithinFilter2ᚖgithubᚗcomᚋStevenACoffmanᚋfederationᚑdemoᚋservicesᚋreviewsᚐWithinFilter(ctx context.Context, v interface{}) (*WithinFilter, error) {
 	if v == nil {
 		return nil, nil
 	}
