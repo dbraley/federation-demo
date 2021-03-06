@@ -1,5 +1,7 @@
 type Product @extends @key(fields: "upc") {
     upc: String! @external @id
+    # weight: Int @external
+    # price: Int @external
     inStock: Boolean
     # shippingEstimate: Int # TODO @requires(fields: "price weight")
 }
