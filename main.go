@@ -83,7 +83,7 @@ func main() {
 
 	subPaths := []string{
 		"/services/accounts/server",
-		"/services/inventory/server",
+		//"/services/inventory/server", // not needed when dgraph is run
 		"/services/products/server",
 		"/services/reviews/server",
 	}
