@@ -6,24 +6,23 @@ services:
     # master (a77939a1)
     image: dgraph/dgraph:8e835f11
     working_dir: /data/alpha1
-    labels:
-      cluster: test
     ports:
     - 8080:8080
     command: dgraph alpha --my=alpha1:7080 --zero=zero1:5080 --logtostderr
-      -v=2 --raft='idx=1; group=1' --security='whitelist=10.0.0.0/8,172.16.0.0/12,192.168.0.0/16' --graphql='debug=true'
-    deploy:
-      resources:
-        limits:
-          memory: 32G
+      -v=4 --raft='idx=1; group=1' --security='whitelist=10.0.0.0/8,172.16.0.0/12,192.168.0.0/16' --graphql='debug=true; lambda-url=http://lambda:8686/graphql-worker'
   zero1:
     image: dgraph/dgraph:8e835f11
     working_dir: /data/zero1
-    labels:
-      cluster: test
     command: dgraph zero --raft='idx=1' --my=zero1:5080 --logtostderr -v=2 --bindall
-    deploy:
-      resources:
-        limits:
-          memory: 32G
+  lambda:
+    image: dgraph/dgraph-lambda:latest
+    depends_on:
+      - alpha1
+    environment:
+      DGRAPH_URL: http://alpha1:8080
+    volumes:
+      - type: bind
+        source: ./dgraph-lambda.js
+        target: /app/script/script.js
+        read_only: true
 volumes: {}

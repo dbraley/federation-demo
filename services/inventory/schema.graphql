@@ -3,5 +3,5 @@ type Product @extends @key(fields: "upc") {
     weight: Int @external
     price: Int @external
     inStock: Boolean
-    shippingEstimate: Int @requires(fields: "price weight")
+    shippingEstimate: Int @requires(fields: "price weight") @lambda
 }
