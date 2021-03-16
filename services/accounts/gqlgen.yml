@@ -6,7 +6,6 @@
 # Where are all the schema files located? globs are supported eg  src/**/*.graphql
 schema:
 - schema.graphql
-- dgraph.graphql
 # Enable Apollo federation support
 federation:
   filename: federation.go

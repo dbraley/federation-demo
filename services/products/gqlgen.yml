@@ -5,7 +5,6 @@
 
 schema:
 - schema.graphql
-- dgraph.graphql
 federation:
   filename: federation.go
 exec:
