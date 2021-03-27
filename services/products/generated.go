@@ -400,7 +400,7 @@ func (ec *executionContext) _Entity_findProductByUpc(ctx context.Context, field 
 	}
 	res := resTmp.(*Product)
 	fc.Result = res
-	return ec.marshalNProduct2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋproductsᚐProduct(ctx, field.Selections, res)
+	return ec.marshalNProduct2ᚖgithubᚗcomᚋdbraleyᚋfederationᚑdemoᚋservicesᚋproductsᚐProduct(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Product_upc(ctx context.Context, field graphql.CollectedField, obj *Product) (ret graphql.Marshaler) {
@@ -570,7 +570,7 @@ func (ec *executionContext) _Query_topProducts(ctx context.Context, field graphq
 	}
 	res := resTmp.([]*Product)
 	fc.Result = res
-	return ec.marshalOProduct2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋproductsᚐProduct(ctx, field.Selections, res)
+	return ec.marshalOProduct2ᚕᚖgithubᚗcomᚋdbraleyᚋfederationᚑdemoᚋservicesᚋproductsᚐProduct(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Query__entities(ctx context.Context, field graphql.CollectedField) (ret graphql.Marshaler) {
@@ -2290,11 +2290,11 @@ func (ec *executionContext) marshalNBoolean2bool(ctx context.Context, sel ast.Se
 	return res
 }
 
-func (ec *executionContext) marshalNProduct2githubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋproductsᚐProduct(ctx context.Context, sel ast.SelectionSet, v Product) graphql.Marshaler {
+func (ec *executionContext) marshalNProduct2githubᚗcomᚋdbraleyᚋfederationᚑdemoᚋservicesᚋproductsᚐProduct(ctx context.Context, sel ast.SelectionSet, v Product) graphql.Marshaler {
 	return ec._Product(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNProduct2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋproductsᚐProduct(ctx context.Context, sel ast.SelectionSet, v *Product) graphql.Marshaler {
+func (ec *executionContext) marshalNProduct2ᚖgithubᚗcomᚋdbraleyᚋfederationᚑdemoᚋservicesᚋproductsᚐProduct(ctx context.Context, sel ast.SelectionSet, v *Product) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "must not be null")
@@ -2694,7 +2694,7 @@ func (ec *executionContext) marshalOInt2ᚖint(ctx context.Context, sel ast.Sele
 	return graphql.MarshalInt(*v)
 }
 
-func (ec *executionContext) marshalOProduct2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋproductsᚐProduct(ctx context.Context, sel ast.SelectionSet, v []*Product) graphql.Marshaler {
+func (ec *executionContext) marshalOProduct2ᚕᚖgithubᚗcomᚋdbraleyᚋfederationᚑdemoᚋservicesᚋproductsᚐProduct(ctx context.Context, sel ast.SelectionSet, v []*Product) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
@@ -2721,7 +2721,7 @@ func (ec *executionContext) marshalOProduct2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑw
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalOProduct2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋproductsᚐProduct(ctx, sel, v[i])
+			ret[i] = ec.marshalOProduct2ᚖgithubᚗcomᚋdbraleyᚋfederationᚑdemoᚋservicesᚋproductsᚐProduct(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -2734,7 +2734,7 @@ func (ec *executionContext) marshalOProduct2ᚕᚖgithubᚗcomᚋmarwanᚑatᚑw
 	return ret
 }
 
-func (ec *executionContext) marshalOProduct2ᚖgithubᚗcomᚋmarwanᚑatᚑworkᚋfederationᚑdemoᚋservicesᚋproductsᚐProduct(ctx context.Context, sel ast.SelectionSet, v *Product) graphql.Marshaler {
+func (ec *executionContext) marshalOProduct2ᚖgithubᚗcomᚋdbraleyᚋfederationᚑdemoᚋservicesᚋproductsᚐProduct(ctx context.Context, sel ast.SelectionSet, v *Product) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
