@@ -33,4 +33,4 @@ jobs:
           context: .
           file: ./services/inventory/Dockerfile
           push: true
-          tags: dbraley/inventory:latest
+          tags: davidbraley/inventory:latest
