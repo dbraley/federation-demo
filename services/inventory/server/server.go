@@ -19,6 +19,7 @@ import (
 const defaultPort = "4004"
 
 func main() {
+	log.Println("Starting!")
 	gqlparser.MustLoadSchema()
 	port := os.Getenv("PORT")
 	if port == "" {
