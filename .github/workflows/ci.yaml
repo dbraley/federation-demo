@@ -31,6 +31,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: services/inventory/Dockerfile
+          file: ./services/inventory/Dockerfile
           push: true
           tags: dbraley/inventory:latest
