@@ -3,7 +3,8 @@ name: ci
 on:
   push:
     branches:
-      - 'main'
+      - 'try-a-thing'
+      # - 'main'
     paths:
       - 'pkg/**'
       - 'services/inventory/**'
