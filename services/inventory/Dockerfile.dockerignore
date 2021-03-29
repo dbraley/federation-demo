@@ -1,0 +1,18 @@
+#Intended to run from project root
+
+# Ignore Everything
+**
+
+# Allow file types and directories
+!services/inventory/**
+
+# Ignore directories and file types
+**/node_modules/**
+**/Dockerfile
+**/*.dockerignore
+**/package.json
+**/package-lock.json
+
+# Allow Specific files
+!go.mod
+!go.sum
